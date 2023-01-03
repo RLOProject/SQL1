@@ -1,0 +1,37 @@
+-Create a clothing store database
+
+CREATE TABLE clothing_items (
+  item_id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  price REAL NOT NULL,
+  color TEXT NOT NULL,
+  size TEXT NOT NULL
+);
+
+INSERT INTO clothing_items (item_id, name, price, color, size)
+VALUES (1, 'T-Shirt', 20, 'Black', 'M'),
+       (2, 'Jeans', 50, 'Blue', '32x32'),
+       (3, 'Dress', 75, 'Red', 'S'),
+       (4, 'Jacket', 100, 'Green', 'L'),
+       (5, 'Skirt', 25, 'Purple', 'M'),
+       (6, 'Sweater', 45, 'Gray', 'S'),
+       (7, 'Shorts', 30, 'Yellow', 'M'),
+       (8, 'Pants', 60, 'Brown', '32x32'),
+       (9, 'Socks', 5, 'Black', 'M'),
+       (10, 'Underwear', 10, 'White', 'L'),
+       (11, 'Belt', 15, 'Black', 'M'),
+       (12, 'Hat', 20, 'Gray', 'M'),
+       (13, 'Scarf', 30, 'Blue', 'M'),
+       (14, 'Gloves', 15, 'Black', 'M'),
+       (15, 'Umbrella', 25, 'Red', 'M');
+
+SELECT * FROM clothing_items ORDER BY price;
+
+SELECT COUNT(*) FROM clothing_items WHERE color = 'Black';
+
+
+SELECT * FROM clothing_items ORDER BY price;
+This select statement retrieves all columns from clothing_items, table and orders the rows by price.
+
+SELECT COUNT(*) FROM clothing_items WHERE color = 'Black';
+This SELECT statement counts the number of rows in the "clothing_items" table where the "color" column has a value of 'Black'
